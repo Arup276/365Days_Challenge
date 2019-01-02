@@ -1,5 +1,7 @@
+# This quick sort has O(nlogn) time complexcity in average case and its a in place sorting algoritham 
+# thats way this is use to most of programming IDE sort().
 def quicksort(arr):
-    quick(arr,0,len(arr)-1)
+    quick(arr,0,len(arr)-1)# you can also call it but then you have to pass start as well as end point 
 
 def quick(arr,start,end):
     if start < end:
@@ -8,60 +10,38 @@ def quick(arr,start,end):
         quick(arr,pindex+1,end)
 
 def partition(arr,start,end):
-    pinde = end
-    pivot = arr[pinde]
+    pindex = end
+    pivot = arr[pindex]
     index = start
     for i in range(start,end):
         if arr[i] < pivot:
             arr[i],arr[index] = arr[index],arr[i]
             index = index+1
-    arr[index],arr[pinde] = arr[pinde],arr[index]
+    arr[index],arr[pindex] = arr[pindex],arr[index] # Here i did a simple mistake hole day pivot = arr[index] ...WTF! was that don't do that
     return index  
 
+# Time complexcity: Worst Case: O(n^2)
+
+#Best Explanation in c++ : https://www.youtube.com/watch?v=COk73cpQbFQ
+
+### Not in place 
+def quick(a):
+    if len(a) <=1:
+        return a
+    low,equal,high = [],[],[]
+    pivot = a[len(a) - 1]
+    for i in a:
+        if i < pivot:
+            low.append(i)
+        elif i > pivot:
+            high.append(i)
+        else:
+            equal.append(i)
+    return quick(low)+equal+quick(high)
 
 
 
 
-###Not in place 
-##def quick(a):
-##    if len(a) <=1:
-##        return a
-##    smaller,equal,larger = [],[],[]
-##    pivot = a[len(a) - 1]
-##    for i in a:
-##        if i < pivot:
-##            smaller.append(i)
-##        elif i > pivot:
-##            larger.append(i)
-##        else:
-##            equal.append(i)
-##    return quick(smaller)+equal+quick(larger)
-
-
-
-
-##            temp = arr[i]
-##            arr[i] = arr[index]
-##            arr[index] = temp
-        
-
-
-
-            
-##    temp = arr[index]
-##    print("arr[index]:",arr[index])
-##    print("Pivot",pivot)
-##    arr[index] = pivot
-##    arr[pinde] = arr[index]
-##    print("index",index)
-##    print(arr)
-##    return index
-##
-
-##
-##
-##
-##
 ####def quick_sort(arr):
 ####    end = len(arr)-1
 ####    if end > 1:
@@ -77,6 +57,9 @@ def partition(arr,start,end):
 ####        second_part = quick_sort(arr[i+1:])
 ####        first_part.append(arr[i])
 ####        return first_part+second_part
+
+
+
 ####def quicksort(x):
 ####    if len(x) == 1 or len(x) == 0:
 ####        return x
