@@ -27,3 +27,4 @@ def merge_sort(arr):
 
     return arr
     
+# Time complexcity : Worst case: O(nlogn)
