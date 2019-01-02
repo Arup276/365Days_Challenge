@@ -4,7 +4,7 @@
 ### Wanna See little bit?
 
 
-#### But also watched NPTEL Tuple and Dictionary video and list maniplation.
+#### But also watched NPTEL Tuple and Dictionary video.
 
 
 Python 3.6.7rc1 (v3.6.7rc1:311101f7b6, Sep 26 2018, 16:33:24) [MSC v.1900 64 bit (AMD64)] on win32
