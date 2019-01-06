@@ -1,3 +1,4 @@
+############################# Logistic Resression Algorithm ##############################
 import matplotlib.pyplot as plt
 #%matplotlib inline
 import numpy as np
