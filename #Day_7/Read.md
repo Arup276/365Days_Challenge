@@ -1,0 +1,1 @@
+### Neural Network week-3 video finished, Data structure some left .  Last two days for this.
