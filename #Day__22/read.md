@@ -1,0 +1,1 @@
+### Nothing more just whole morning trining to do YOLO-V3 custom object detection and seriously it's sucks so hard...??????
